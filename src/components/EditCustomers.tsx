@@ -57,7 +57,7 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
     });
     setTimeout(() => {
       comeBack();
-    });
+    }, 1000);
   };
 
   const changeType = () => {
