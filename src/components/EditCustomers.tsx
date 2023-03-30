@@ -18,7 +18,6 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
     data?.email,
     data?.password,
   ]);
-  const [user, setUsers] = useState<value>();
   const [value, setValue] = useState<value>({
     name: '',
     lastName: '',
@@ -58,7 +57,7 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
     });
     setTimeout(() => {
       comeBack();
-    }, 300);
+    });
   };
 
   const changeType = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { value } from '../interfaces/IValue';
 import { Pen } from '../svg/pen';
 import { Trash } from '../svg/trash';

@@ -23,12 +23,8 @@ export function Sidebar({ onClick }: Sidebar) {
   });
 
   useEffect(() => {
-    setUsers(AllUser);
-  }, []);
-
-  useEffect(() => {
     onClick(users);
-  }, [users, onClick]);
+  }, [users]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>, i: number) => {
     setInput((prevState) => {
