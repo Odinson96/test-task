@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { UsersList } from '../components/UsersList';
+import { UserList } from '../components/UsersList';
 
 // export const getStaticProps: GetStaticProps = async () => {
 //    const response = await axios.get('http://localhost:3002/users');
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <title>Dashboard</title>
       </Head>
       <div>
-        <UsersList />
+        <UserList />
       </div>
     </>
   );

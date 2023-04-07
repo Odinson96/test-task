@@ -1,4 +1,4 @@
-import { ChangeEvent, SyntheticEvent, useEffect, useState } from 'react';
+import { ChangeEvent, SyntheticEvent, memo, useEffect, useState } from 'react';
 import { value } from '../interfaces/IValue';
 
 interface EditCustomers {
@@ -7,8 +7,12 @@ interface EditCustomers {
   comeBack: () => void;
 }
 
-export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
-  const [radioChanger, setRadio] = useState<string>('user');
+export const EditCustomers = memo(function EditCustomers({
+  data,
+  onClick,
+  comeBack,
+}: EditCustomers) {
+  const [radioChanger, setRadio] = useState<string>(data.status);
   const [showPassw, setShowPass] = useState<string>('password');
   const [inputValue, setInput] = useState<string[]>([
     data?.name,
@@ -18,6 +22,7 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
     data?.email,
     data?.password,
   ]);
+
   const [value, setValue] = useState<value>({
     name: '',
     lastName: '',
@@ -57,7 +62,7 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
     });
     setTimeout(() => {
       comeBack();
-    }, 1000);
+    }, 10000);
   };
 
   const changeType = () => {
@@ -172,4 +177,4 @@ export function EditCustomers({ data, onClick, comeBack }: EditCustomers) {
       </form>
     </div>
   );
-}
+});

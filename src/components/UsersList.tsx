@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { value } from '../interfaces/IValue';
 import { Pen } from '../svg/pen';
 import { Trash } from '../svg/trash';
@@ -8,7 +8,7 @@ import { AllUser } from './State';
 import { Icons } from './Icons.js';
 
 // export function UsersList({ data }: InferGetStaticPropsType<typeof getStaticProps>) {
-export function UsersList() {
+export const UserList = memo(function UsersList() {
   const [users, setUsers] = useState<value[]>(AllUser);
   const [title, setTitle] = useState<string>('new');
   const [edit, setEdit] = useState<value>({
@@ -135,4 +135,4 @@ export function UsersList() {
       </div>
     </div>
   );
-}
+});
