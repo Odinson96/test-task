@@ -62,7 +62,7 @@ export const EditCustomers = memo(function EditCustomers({
     });
     setTimeout(() => {
       comeBack();
-    }, 10000);
+    }, 1000);
   };
 
   const changeType = () => {
