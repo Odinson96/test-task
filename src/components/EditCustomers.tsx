@@ -70,7 +70,7 @@ export const EditCustomers = memo(function EditCustomers({
   };
 
   return (
-    <div className=" w-1/3 pt-10 ml-10 pr-10 border-r h-screen -mt-10 border-slate-200">
+    <div className=" pt-10 ml-10 pr-10 border-r h-screen -mt-10 border-slate-200">
       <h1 className="mb-10 mt-10 text-xl">Edit customers</h1>
       <form onSubmit={(e) => handleSendUser(e)}>
         <div className="display: flex">
